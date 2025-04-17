@@ -1,0 +1,46 @@
+/* product-add.css */
+body {
+    font-family: 'Pretendard', sans-serif;
+    padding: 2rem;
+    background: #fdf9f4;
+}
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+input,
+textarea,
+button,
+select {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0 1rem;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    background-color: #eac0a2;
+    color: #3a2e2e;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #d3a07b;
+}
+
+.form-group {
+    max-width: 500px;
+    margin-bottom: 1.5rem;
+}
+/* end product-add.css */

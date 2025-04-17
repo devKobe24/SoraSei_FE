@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zxx">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SoraSei</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- header -->
+        <header>
+            <div class="container">
+                <h1>
+                    <button data-animation-scroll="true" data-target="#main">SoraSei</button>
+                </h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <button data-animation-scroll="true" data-target="#category">
+                                Category
+                            </button>
+                        </li>
+                        <li>
+                            <button data-animation-scroll="true" data-target="#accessories">
+                                Accessories
+                            </button>
+                        </li>
+                        <li>
+                            <button data-animation-scroll="true" data-target="#portfolio">
+                                Home deco
+                            </button>
+                        </li>
+                        <li>
+                            <button data-animation-scroll="true" data-target="#contact">
+                                Contact
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- //end header -->
+        <!-- main -->
+        <main id="main">
+            <div class="container">
+                <h4>Welcome</h4>
+                <h2 class="active">We are <span></span></h2>
+                <p>Le désert est beau parce qu’il cache un puits quelque part.</p>
+                <!-- <button class="download">DOWNLOAD CV</button> -->
+                <button class="mouse"><i class="fa-solid fa-computer-mouse"></i></button>
+            </div>
+        </main>
+        <!-- //end Main -->
+        <!-- Category -->
+        <section id="category" class="category">
+            <div class="container">
+                <div class="title">
+                    <h4>CATEGORY BLOCK</h4>
+                    <h2>Category</h2>
+                </div>
+                <div class="category-me" id="category-container">
+                    <!-- 여기에 JS가 자동으로 6개 생성해줌 -->
+                </div>
+            </div>
+        </section>
+        <!-- //end Category -->
+        <!-- Background -->
+        <div class="bg"></div>
+        <!-- //end Background-->
+        <!doctype html>
+        <html lang="ko">
+            <head>
+                <meta charset="UTF-8" />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>What I Do</title>
+                <link
+                    rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+                    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+                    crossorigin="anonymous"
+                    referrerpolicy="no-referrer"
+                />
+                <link rel="stylesheet" href="../css/accessories.css" />
+            </head>
+            <body>
+                <!-- Accessories -->
+                <section id="accessories" class="accessories">
+                    <div class="container">
+                        <div class="title">
+                            <h4>Accessories</h4>
+                            <h2>Popular Items</h2>
+                        </div>
+
+                        <!-- 카드 영역 -->
+                        <div class="accessories-me" id="card-container">
+                            <!-- JS로 카드 자동 삽입 (6개 고정)-->
+                        </div>
+                    </div>
+                </section>
+                <!-- End Accessories -->
+            </body>
+        </html>
+        <!-- Background -->
+        <div class="bg"></div>
+        <!-- //end Background-->
+
+        <!-- Contact With Me -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="title">
+                    <h4>CONTACT</h4>
+                    <h2>Contact With Me</h2>
+                </div>
+                <div class="contact-me">
+                    <div class="left">
+                        <div class="card">
+                            <div class="icon">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </div>
+                            <div class="info-text">
+                                <h3>phone</h3>
+                                <p>010-2222-1111</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="icon">
+                                <i class="fa-solid fa-envelope-open-text"></i>
+                            </div>
+                            <div class="info-text">
+                                <h3>email</h3>
+                                <p>sucoding@naver.com</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="icon">
+                                <i class="fa-solid fa-location-crosshairs"></i>
+                            </div>
+                            <div class="info-text">
+                                <h3>address</h3>
+                                <p>Samseong-ro, Gangnam-gu, Seoul, Republic of Korea</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <form action="#">
+                            <div class="form-group">
+                                <label for="name">name</label>
+                                <input type="text" id="name" />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">email</label>
+                                <input type="text" id="email" />
+                            </div>
+                            <div class="form-group">
+                                <label for="msg">message</label>
+                                <textarea id="msg"></textarea>
+                            </div>
+                            <button>send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end Contact With Me -->
+        <!-- script 태그는 수정하지 않습니다. -->
+        <script src="script.js"></script>
+    </body>
+</html>

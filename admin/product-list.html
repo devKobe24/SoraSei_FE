@@ -1,0 +1,83 @@
+<!-- product-list.html -->
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>상품 목록</title>
+        <link rel="stylesheet" href="./css/product-list.css" />
+    </head>
+    <body>
+        <div id="admin-header"></div>
+        <div class="container">
+            <div class="table-wrapper">
+                <h1>상품 목록</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>상품명</th>
+                            <th>설명</th>
+                            <th>가격</th>
+                            <th>이미지</th>
+                            <th>재고</th>
+                            <th>상태</th>
+                            <th>카테고리</th>
+                            <th>관리</th>
+                        </tr>
+                    </thead>
+                    <tbody id="product-table-body">
+                        <!-- JS로 렌더링 -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ✅ 수정 모달 -->
+        <div id="edit-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>상품 수정</h2>
+                <form id="edit-form">
+                    <input type="hidden" id="edit-id" />
+
+                    <label>상품명</label>
+                    <input type="text" id="edit-name" required />
+
+                    <label>설명</label>
+                    <input type="text" id="edit-description" required />
+
+                    <label>가격</label>
+                    <input type="number" id="edit-price" required />
+
+                    <label>이미지 URL</label>
+                    <input type="text" id="edit-imageUrl" required />
+
+                    <label>재고</label>
+                    <input type="number" id="edit-stockQuantity" required />
+
+                    <label>카테고리</label>
+                    <select id="edit-category" required>
+                        <option value="clothes">Clothes</option>
+                        <option value="accessories">Accessories</option>
+                        <option value="goods">Goods</option>
+                        <option value="etc">Etc</option>
+                    </select>
+
+                    <label>활성화 여부</label>
+                    <select id="edit-active">
+                        <option value="true">활성화</option>
+                        <option value="false">비활성화</option>
+                    </select>
+                    <div class="modal-buttons">
+                        <button type="submit">저장</button>
+                        <button type="button" onclick="closeModal()">취소</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="./common/js/header-loader.js"></script>
+        <script src="./js/product-list.js"></script>
+    </body>
+</html>
+<!-- end product-list.html -->

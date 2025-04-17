@@ -1,0 +1,176 @@
+/* /css/product-list.css */
+body {
+    font-family: 'Pretendard', sans-serif;
+    background-color: #fef9f5;
+    padding: 2rem;
+    color: #333;
+}
+
+.container {
+    max-width: 100%;
+    padding: 2rem 4rem;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    background: white;
+    border-collapse: collapse;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 헤더 컬럼 스타일 */
+th {
+    background-color: #eee1d5;
+    font-weight: bold;
+}
+
+thead {
+    background-color: #eee1d5;
+}
+
+/* 셀 너비와 정렬 */
+th,
+td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+/* 각 열 비율 조절 */
+td:nth-child(2) {
+    width: 15%;
+} /* 상품명 */
+td:nth-child(3) {
+    width: 25%;
+    text-align: left;
+} /* 설명 */
+td:nth-child(4) {
+    width: 10%;
+} /* 가격 */
+td:nth-child(5) {
+    width: 10%;
+} /* 이미지 */
+td:nth-child(6) {
+    width: 8%;
+} /* 재고 */
+td:nth-child(7) {
+    width: 8%;
+} /* 상태 */
+td:nth-child(8) {
+    width: 10%;
+} /* 카테고리 */
+td:nth-child(9) {
+    width: 14%;
+} /* 관리 버튼 */
+
+/* 이미지 고정 크기 */
+img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.btn {
+    padding: 6px 14px;
+    margin: 2px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn.edit {
+    background-color: #3498db;
+    color: white;
+}
+.btn.edit:hover {
+    background-color: #2980b9;
+}
+
+.btn.delete {
+    background-color: #e74c3c;
+    color: white;
+}
+.btn.delete:hover {
+    background-color: #c0392b;
+}
+
+/* 모달 */
+.modal.hidden {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 400px;
+}
+
+.modal-content label {
+    display: block;
+    margin: 0.5rem 0 0.25rem;
+}
+.modal-content input,
+.modal-content select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+td:nth-child(3) {
+    max-width: 300px; /* 너비 제한 (필요시 auto 로 조정 가능) */
+    white-space: normal; /* 줄바꿈 허용 */
+    overflow: visible; /* 텍스트 잘리지 않도록 */
+    text-overflow: unset; /* 말줄임표 제거 */
+    text-align: left; /* 좌측 정렬 */
+    line-height: 1.4; /* 줄간격 */
+    word-break: keep-all; /* 단어 중간 줄바꿈 방지 */
+    padding: 1rem 1.5rem; /* 여백 조정 */
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    td:nth-child(3) {
+        word-break: break-word;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+}
+
+/* end /css/product-list.css */

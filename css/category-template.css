@@ -1,0 +1,152 @@
+/* category-template.css */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* ✅ 정확히 5열 고정 */
+    gap: 2.5rem; /* ✅ 카드 간 간격 늘리기 */
+    justify-items: center; /* ✅ 각 셀 내부 아이템 중앙 정렬 */
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* 카드 하나일 때 너무 커지지 않도록 제한 */
+.card-inner {
+    max-width: 260px; /* ✅ 레이아웃에 맞는 카드 크기 제한 */
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.card-inner:hover {
+    background-color: #ffd700;
+    color: black;
+    transform: translateY(-5px);
+}
+
+/* 카드 이미지 */
+/* 이미지 비율 유지 + 고정 높이 제한 */
+.card-inner img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: #eee;
+    transition: transform 0.3s ease;
+}
+
+.card-inner:hover img {
+    transform: scale(1.05);
+}
+
+/* 카드 텍스트 - 상품명 */
+.card-inner .content h3 {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.4;
+    color: black;
+    margin: 1rem 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+/* 카드 텍스트 - 가격 */
+.card-inner .content .price {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+    margin-top: 0.25rem;
+    transition: color 0.3s ease;
+}
+
+/* Hover 시 텍스트 색상 변경 */
+.card-inner:hover .content h3,
+.card-inner:hover .content .price {
+    color: white;
+}
+
+/* 상단 여백 확보 */
+.product-list {
+    margin-top: 100px; /* 그대로 유지 */
+    padding-bottom: 1rem;
+}
+
+/* ✅ 미디어 쿼리 제거: Grid로 반응형 자동 처리됨 */
+
+.load-more-wrapper {
+    text-align: center;
+    margin-top: 0;
+}
+
+#load-more {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: lightcoral;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#load-more:hover {
+    background-color: #e25d5d;
+}
+
+/* ✅ 페이드 전환 애니메이션 */
+.fade-out {
+    opacity: 0;
+    transform: translateY(10px);
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+    pointer-events: none;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+/* ✅ pagination 스타일 */
+#pagination {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+#pagination button {
+    padding: 0.5rem 1rem;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Pretendard', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+#pagination button:hover {
+    background-color: #f2f2f2;
+}
+
+#pagination button.active {
+    background-color: lightcoral;
+    color: white;
+    font-weight: bold;
+}
+/* end category-template.css */

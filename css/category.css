@@ -1,0 +1,105 @@
+/* category.css */
+/* 초기화 및 카드 기본 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section.category::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+section.category .category-inner {
+    width: 30%;
+    margin-right: 5%;
+    margin-bottom: 3rem;
+    padding: 1rem 1rem 1.5rem 1rem;
+    float: left;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+    cursor: pointer;
+}
+
+section.category .category-inner:nth-child(3n) {
+    margin-right: 0;
+}
+
+section.category .img-box {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+section.category .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+section.category .category-inner strong {
+    color: #ff6a6a;
+    margin: 0.5rem 0;
+    display: block;
+}
+
+section.category .category-inner h3 {
+    font-size: 1.75rem;
+}
+
+.category-inner:hover .img-box img {
+    transform: scale(1.05);
+}
+
+/* ✅ 페이드 아웃 효과 (전환 시) */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+}
+
+/* Hover 애니메이션 */
+section.category .category-inner {
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+    cursor: pointer;
+}
+
+section.category .category-inner:hover {
+    background-color: lightcoral;
+    color: white;
+    transform: translateY(-5px);
+}
+
+section.category .img-box img {
+    transition: transform 0.3s ease;
+}
+
+section.category .category-inner:hover .img-box img {
+    transform: scale(1.05);
+}
+
+/* 기본 색상 */
+.category-inner .category-label {
+    color: lightcoral;
+    transition: color 0.3s ease;
+}
+
+/* hover 시 텍스트 white */
+.category-inner:hover .category-label {
+    color: white;
+}
+/* End category.css */

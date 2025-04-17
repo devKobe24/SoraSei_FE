@@ -1,0 +1,561 @@
+/* import 구문은 항상 CSS 파일의 맨 윗줄에 작성  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Varela+Round&display=swap');
+/* header.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+a:link,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+header {
+    position: absolute;
+    color: black;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 1rem;
+    transition:
+        background-color 0.4s ease,
+        box-shadow 0.3s ease;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    padding: 10px;
+}
+
+header button {
+    background: transparent;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+
+header h1 button {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header nav ul li button {
+    font-size: 1.2rem;
+}
+
+header.active {
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* End header.css */
+
+/* main.css */
+main {
+    width: 100%;
+    height: 100vh;
+    color: white;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url('images/main-page/japan-retro-2.jpg') center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+main h4 {
+    font-size: 2rem;
+}
+main h2 {
+    font-size: 3.5rem;
+    margin: 2rem 0;
+    letter-spacing: 3px;
+    font-family: 'Varela Round', sans-serif; /* 웹 폰트 추가 */
+}
+main p {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 1.25rem;
+}
+main button.download {
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 20px;
+    padding: 1rem 2rem;
+    margin-top: 3rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+main button.mouse {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: upDown 1s ease-in-out infinite;
+    cursor: pointer;
+}
+@keyframes upDown {
+    0% {
+        bottom: 1rem;
+    }
+    50% {
+        bottom: 1.5rem;
+    }
+    100% {
+        bottom: 1rem;
+    }
+}
+main h2 span::after {
+    content: '';
+    height: 40px;
+    width: 3px;
+    background-color: #fff;
+    display: inline-block;
+    animation: blink 0.7s ease-in-out infinite;
+}
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/* end main css */
+
+/* about_me.css */
+section {
+    font-family: 'Poppins', sans-serif;
+    padding: 5rem 0;
+}
+section:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+section .title {
+    margin-bottom: 3rem;
+}
+section .title h4 {
+    font-size: 1.35rem;
+    color: #ed4848;
+    position: relative;
+}
+section .title h2 {
+    font-size: 3.5rem;
+}
+section .title p {
+    font-size: 1.15rem;
+}
+/* float 속성 해제 */
+section .about-self::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+/* 본문 너비 절반 지정 & 왼쪽 배치 */
+section .about-self .left {
+    width: 50%;
+    float: left;
+}
+/* 이미지 크기가 부모 영역을 넘지 않도록 부모 영역의 최대 크기로 지정 */
+section .about-self .left img {
+    max-width: 100%;
+}
+/* 본문 너비 절반 지정 & 오른쪽 배치 */
+section .about-self .right {
+    width: 50%;
+    float: left;
+    padding: 0 2rem;
+}
+/* 본문 오른쪽 h3 태그의 글자 크기와 여백 지정 */
+section .about-self .right h3 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+}
+/* 본문 오른쪽 h3 태그의 strong 태그 색상 강조 */
+section .about-self .right h3 strong {
+    color: #ed4848;
+}
+/* 본문 오른쪽 p 태그의 크기와 여백 지정 */
+section .about-self .right p {
+    font-size: 1.15rem;
+    margin: 1rem 0;
+}
+/* 본문 오른쪽의 아이콘 폰트 크기와 여백 지정 */
+section .about-self .right .social a {
+    font-size: 2.5rem;
+    margin-right: 0.2rem;
+}
+/* End about_me.css */
+
+/* accessories.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Pretendard', sans-serif;
+    background-color: #f7f7f7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.title h4 {
+    font-size: 1rem;
+    color: gray;
+    margin-bottom: 0.5rem;
+}
+
+.title h2 {
+    font-size: 2rem;
+}
+
+/* 카드 레이아웃 */
+.accessories-me {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* 개별 카드 */
+.accessories-inner {
+    flex: 1 1 calc(33.333% - 2rem);
+    max-width: 300px;
+    background-color: #fff;
+    padding: 1rem;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 10px;
+    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* 이미지 */
+.accessories-inner .image-wrapper {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.accessories-inner img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    background-color: #eee;
+}
+
+/* 텍스트 */
+.accessories-inner .content {
+    text-align: left;
+}
+
+/* 카드 텍스트 - 상품명 */
+.accessories-inner .content h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem 0;
+    font-weight: bold;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+/* 카드 텍스트 - 가격 */
+.accessories-inner .content .price {
+    font-size: 1.2rem;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+/* hover 효과 */
+.accessories-inner:hover {
+    background-color: lightcoral;
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* hover 시 텍스트 색상 변경 */
+.accessories-inner:hover .content h3,
+.accessories-inner:hover .content .price {
+    color: white;
+}
+
+.accessories-inner:hover img {
+    transform: scale(1.05);
+}
+
+.accessories-inner .category-label {
+    color: lightcoral;
+    transition: color 0.3s ease;
+}
+
+.accessories-inner:hover .category-label {
+    color: white;
+}
+
+/* 반응형 */
+@media screen and (max-width: 1024px) {
+    .accessories-inner {
+        flex: 1 1 calc(33.333% - 2rem);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .accessories-inner {
+        flex: 1 1 calc(50% - 2rem);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .accessories-inner {
+        flex: 1 1 100%;
+    }
+}
+/* end accessories.css */
+
+/* background.css */
+.bg {
+    background: url('../images/main-page/japan-retro-1.jpg') center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 650px;
+}
+/* End background.css */
+
+/* category.css */
+/* 초기화 및 카드 기본 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section.category::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+section.category .category-inner {
+    width: 30%;
+    margin-right: 5%;
+    margin-bottom: 3rem;
+    padding: 1rem 1rem 1.5rem 1rem;
+    float: left;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+    cursor: pointer;
+}
+
+section.category .category-inner:nth-child(3n) {
+    margin-right: 0;
+}
+
+section.category .img-box {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+section.category .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+section.category .category-inner strong {
+    color: #ff6a6a;
+    margin: 0.5rem 0;
+    display: block;
+}
+
+section.category .category-inner h3 {
+    font-size: 1.75rem;
+}
+
+.category-inner:hover .img-box img {
+    transform: scale(1.05);
+}
+
+/* ✅ 페이드 아웃 효과 (전환 시) */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+}
+
+/* Hover 애니메이션 */
+section.category .category-inner {
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+    cursor: pointer;
+}
+
+section.category .category-inner:hover {
+    background-color: lightcoral;
+    color: white;
+    transform: translateY(-5px);
+}
+
+section.category .img-box img {
+    transition: transform 0.3s ease;
+}
+
+section.category .category-inner:hover .img-box img {
+    transform: scale(1.05);
+}
+
+/* 기본 색상 */
+.category-inner .category-label {
+    color: lightcoral;
+    transition: color 0.3s ease;
+}
+
+/* hover 시 텍스트 white */
+.category-inner:hover .category-label {
+    color: white;
+}
+/* End category.css */
+
+/* contact_with_me.css */
+
+section.contact .contact-me::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+section.contact .contact-me .left {
+    width: 30%;
+    float: left;
+}
+section.contact .contact-me .right {
+    float: left;
+    width: 65%;
+    margin-left: 5%;
+}
+section.contact .contact-me .left .card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+section.contact .contact-me .left .card .icon i {
+    font-size: 2rem;
+    margin-right: 5px;
+}
+section.contact .contact-me .right {
+    float: left;
+    width: 65%;
+    margin-left: 5%;
+    margin-bottom: 2rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
+/* form-group 사이 간격 지정 */
+section.contact .contact-me .right .form-group {
+    margin-bottom: 1.25rem;
+}
+/* label 태그가 인라인 성격이어서 외부 여백을 적용하기 위해 block으로 변경 */
+section.contact .contact-me .right .form-group label {
+    display: block;
+    margin-bottom: 0.85rem;
+}
+/* input 요소 꾸미기 */
+section.contact .contact-me .right .form-group input {
+    padding: 0.625rem;
+    width: 100%;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+/* :focus 가상 클래스 선택자로 입력 요소에 커서가 활성화되면 파란색 테두리와 그림자 효과 추가 */
+section.contact .contact-me .right .form-group input:focus {
+    border: 1px solid #719ece;
+    box-shadow: 0 0 10px #719ece;
+}
+/* textarea 요소 꾸미기 */
+section.contact .contact-me .right .form-group textarea {
+    height: 300px;
+    width: 100%;
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+/* textarea 요소에 커서 활성화가 되면 파란색 테두리와 그림자 효과 추가 */
+section.contact .contact-me .right .form-group textarea:focus {
+    outline: none;
+    border: 1px solid #719ece;
+    box-shadow: 0 0 10px #719ece;
+}
+/* 버튼 요소 꾸미기 */
+section.contact .contact-me .right button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #f78b00;
+    border: none;
+    color: white;
+}
+
+/* End contact_with_me.css */

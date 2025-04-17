@@ -1,0 +1,57 @@
+<!-- category-clothes.html -->
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Clothes | SoraSei</title>
+
+        <!-- 폰트 및 아이콘 -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+        />
+
+        <!-- 스타일 -->
+        <link rel="stylesheet" href="../css/common.css" />
+        <link rel="stylesheet" href="../css/category-template.css" />
+    </head>
+    <body>
+        <!-- 헤더 -->
+        <header>
+            <div class="container">
+                <h1><a href="../index.html">SoraSei</a></h1>
+                <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="category-clothes.html">Clothes</a></li>
+                        <li><a href="category-accessories.html">Accessories</a></li>
+                        <li><a href="category-goods.html">Goods</a></li>
+                        <li><a href="category-etc.html">Etc</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- 콘텐츠 -->
+        <main class="product-list">
+            <div class="card-container" id="card-container"></div>
+            <div class="load-more-wrapper">
+                <div id="pagination"></div>
+            </div>
+        </main>
+        <!-- JS 추가-->
+        <script src="../js/category-clothes.js"></script>
+        <script src="../js/hamburger.js"></script>
+    </body>
+</html>
+<!-- end category-clothes.html -->

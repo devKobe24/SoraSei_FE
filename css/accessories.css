@@ -1,0 +1,139 @@
+/* accessories.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Pretendard', sans-serif;
+    background-color: #f7f7f7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.title h4 {
+    font-size: 1rem;
+    color: gray;
+    margin-bottom: 0.5rem;
+}
+
+.title h2 {
+    font-size: 2rem;
+}
+
+/* 카드 레이아웃 */
+.accessories-me {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* 개별 카드 */
+.accessories-inner {
+    flex: 1 1 calc(33.333% - 2rem);
+    max-width: 300px;
+    background-color: #fff;
+    padding: 1rem;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 10px;
+    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* 이미지 */
+.accessories-inner .image-wrapper {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.accessories-inner img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    background-color: #eee;
+}
+
+/* 텍스트 */
+.accessories-inner .content {
+    text-align: left;
+}
+
+/* 카드 텍스트 - 상품명 */
+.accessories-inner .content h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem 0;
+    font-weight: bold;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+/* 카드 텍스트 - 가격 */
+.accessories-inner .content .price {
+    font-size: 1.2rem;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+/* hover 효과 */
+.accessories-inner:hover {
+    background-color: lightcoral;
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* hover 시 텍스트 색상 변경 */
+.accessories-inner:hover .content h3,
+.accessories-inner:hover .content .price {
+    color: white;
+}
+
+.accessories-inner:hover img {
+    transform: scale(1.05);
+}
+
+.accessories-inner .category-label {
+    color: lightcoral;
+    transition: color 0.3s ease;
+}
+
+.accessories-inner:hover .category-label {
+    color: white;
+}
+
+/* 반응형 */
+@media screen and (max-width: 1024px) {
+    .accessories-inner {
+        flex: 1 1 calc(33.333% - 2rem);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .accessories-inner {
+        flex: 1 1 calc(50% - 2rem);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .accessories-inner {
+        flex: 1 1 100%;
+    }
+}
+/* end accessories.css */

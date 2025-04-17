@@ -1,0 +1,18 @@
+{
+	// 저장할 때 자동 포맷
+	"editor.formatOnSave": true,
+  
+	// HTML, CSS, JS 등 파일에 Prettier를 기본 포맷터로 지정
+	"[html]": {
+	  "editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[css]": {
+	  "editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+	  "editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+  
+	// Prettier 설정 파일이 없으면 포맷하지 않게 할 수도 있음 (선택)
+	"prettier.requireConfig": false
+  }

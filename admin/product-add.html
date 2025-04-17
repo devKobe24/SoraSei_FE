@@ -1,0 +1,74 @@
+<!-- product-add.html -->
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>상품 등록</title>
+        <link rel="stylesheet" href="./css/product-add.css" />
+    </head>
+    <body>
+        <div id="admin-header"></div>
+        <h1>상품 등록</h1>
+        <form id="product-form" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="name">상품명</label>
+                <input type="text" id="name" required />
+            </div>
+            <div class="form-group">
+                <label for="description">설명</label>
+                <input type="text" id="description" />
+            </div>
+            <div class="form-group">
+                <label for="price">가격</label>
+                <input type="number" id="price" required />
+            </div>
+            <div class="form-group">
+                <label for="stockQuantity">재고 수량</label>
+                <input type="number" id="stockQuantity" required />
+            </div>
+            <div class="form-group">
+                <label for="category">카테고리</label>
+                <select id="category" required>
+                    <option value="clothes">Clothes</option>
+                    <option value="accessories">Accessories</option>
+                    <option value="goods">Goods</option>
+                    <option value="etc">Etc</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="active">활성화 여부</label>
+                <select id="active">
+                    <option value="true" selected>활성화</option>
+                    <option value="false">비활성화</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>대표 이미지 및 1번 썸네일</label>
+                <input type="file" id="thumbnail1" name="thumbnails" accept="image/*" required />
+            </div>
+            <div class="form-group">
+                <label>2번 썸네일</label>
+                <input type="file" id="thumbnail2" name="thumbnails" accept="image/*" />
+            </div>
+            <div class="form-group">
+                <label>3번 썸네일</label>
+                <input type="file" id="thumbnail3" name="thumbnails" accept="image/*" />
+            </div>
+            <div class="form-group">
+                <label>4번 썸네일</label>
+                <input type="file" id="thumbnail4" name="thumbnails" accept="image/*" />
+            </div>
+            <div class="form-group">
+                <label>5번 썸네일</label>
+                <input type="file" id="thumbnail5" name="thumbnails" accept="image/*" />
+            </div>
+
+            <button type="submit">등록하기</button>
+        </form>
+
+        <script src="./common/js/header-loader.js"></script>
+        <script src="./js/product-add.js"></script>
+    </body>
+</html>
+<!-- end product-add.html -->
